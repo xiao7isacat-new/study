@@ -1,0 +1,3 @@
+
+# 忽略根目录下的 k8s/kubernetes/ 目录
+/k8s/kubernetes/
