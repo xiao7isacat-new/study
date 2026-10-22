@@ -270,3 +270,12 @@ kubectl get rs -n volc -o json | jq -r '
     
     go env -w GO111MODULE=on
     go env -w GOPROXY=https://goproxy.cn,direct
+
+
+# nvim
+
+## 命令
+```
+# 让文件被识别为go文件
+:doautocmd FileType go
+```
