@@ -1,6 +1,6 @@
 # 第一天学习成果评审
 
-更新日期：2026-10-23。依据最新的 [task_acceptance_day1.md](/Users/wty/workspace/study/week01/task_acceptance_day1.md)。实际学习日期和总用时尚未提供。
+更新日期：2026-10-23。依据最新的 [task_acceptance_day1.md](/Users/wty/workspace/study/week01/day1/task_acceptance_day1.md)。实际学习日期和总用时尚未提供。
 
 本文件始终保存第 1 天的最新 review，同一天后续更新直接修订本文件。原始任务清单保持不变。
 
@@ -26,7 +26,7 @@
 
 ### 1. 接口题：不能编译的判断正确，原因仍需修正
 
-位置：[第 218 行](/Users/wty/workspace/study/week01/task_acceptance_day1.md:218)。
+位置：[第 218 行](/Users/wty/workspace/study/week01/day1/task_acceptance_day1.md:218)。
 
 你仍写“函数返回的是一个指针类型”。实际声明是：
 
@@ -45,7 +45,7 @@ func getAnimals(animal string) (animals, error)
 
 ### 2. 取消题：channel 关闭已理解，返回与打印仍混淆
 
-位置：[第 203 行](/Users/wty/workspace/study/week01/task_acceptance_day1.md:203)。
+位置：[第 203 行](/Users/wty/workspace/study/week01/day1/task_acceptance_day1.md:203)。
 
 “Done channel 会被关闭”的方向已经正确。还需修改两点：
 
@@ -58,7 +58,7 @@ func getAnimals(animal string) (animals, error)
 
 ### 3. 500ms 题：“正常完成”与“超时”仍混用
 
-位置：[第 190 行](/Users/wty/workspace/study/week01/task_acceptance_day1.md:190)。
+位置：[第 190 行](/Users/wty/workspace/study/week01/day1/task_acceptance_day1.md:190)。
 
 输出和“返回 nil、继续执行”的判断已正确，只需把开头的“大约 300ms 超时”改成：
 

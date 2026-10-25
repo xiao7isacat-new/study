@@ -59,7 +59,7 @@ v1.32 已于 2026-02-28 结束上游支持；它适合作为你指定的源码�
 
 | 周 | 源码与机制重点 | GPU 重点 | 项目增量和当周验收 |
 | --- | --- | --- | --- |
-| 1 | 固定版本、跑一个目标包测试；Go 的 interface、error、context；用进程和容器观察 namespace/cgroup | 认清 GPU/驱动/CUDA/runtime 的关系；准备机器档案 | 写只读 Node/Pod 清单 CLI，支持 JSON 和超时；提交环境清单、Pod 生命周期草图、一个容器隔离实验 |
+| 1 | 固定版本、跑一个目标包测试；Go 的 interface、error、context；用进程和容器观察 namespace/cgroup | 认清 GPU/驱动/CUDA/runtime 的关系；准备机器档案 | 写只读 Node/Pod 清单 CLI，支持 JSON 和超时；提交环境清单、一个容器隔离实验。第 2 天 Pod 图修正与字段采集已于 2026-10-25 按用户要求取消 |
 | 2 | RESTClient/Clientset、List/Watch、resourceVersion；理解断连后的重新同步 | 准备 driver/runtime 兼容检查；争取实机窗口 A | CLI 增加 watch 和退出处理；在真实实验 API Server 上验证断连恢复后状态正确；记录原始事件 |
 | 3 | Reflector → DeltaFIFO → SharedInformer → Indexer/Lister；缓存同步与共享对象 | 裸机、容器、Pod 的 GPU 可见性分层；无卡时分析窗口 A 证据 | 改为 informer 观察器；按节点索引工作负载；能解释缓存滞后、DeepCopy 和初始同步 |
 | 4 | typed workqueue、去重、限速重试、幂等协调、优雅退出；读 sample-controller | 整理 2 个“宿主机有卡但容器不可用”的案例 | 将目标 Node 的摘要协调到测试命名空间内自有 ConfigMap；验证重复事件、删除 ConfigMap 后重建、重启、临时失败后的收敛；完成第 1 月考核 |
