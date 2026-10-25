@@ -92,3 +92,5 @@ memory.current: 2715648
    kubernetes.Clientset 可以调用CoreV1。他名称很明显的有一个标识说是client 。而不是server的控制器。
 2. 一个 Pod 已有 nodeName 且 PodScheduled=True，但 phase 仍是 Pending，是否矛盾？你会从哪些实际字段或事件继续定位？
    我认为是不矛盾的。有 nodeName 且 PodScheduled=True。已经有nodeName 说明schedule 经过打分之后认为node上的资源是符合预期的。我会根据 event 事件来查看这个pod 否发生了哪些事件，是否因为磁盘，cpu内存等问题导致他又变得不可调度。
+3. Pod 已绑定 worker-1，仍 Pending，原因是 `ErrImagePull`。修改 scheduler 打分能直接解决吗？你会先查哪两类信息？
+   看情况而定。因为调度器的打分只能解决调度的问题。如果修改打分调度的其他节点。而其他节点可以拉镜像，那就可以解决。如果还是在本节点上。无法拉去镜像是 container 层面的事情，和k8s 的 schedule 没有关系。
